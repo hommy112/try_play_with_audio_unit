@@ -19,24 +19,26 @@
               AVAudioSessionCategoryOptionAllowBluetooth |
               AVAudioSessionCategoryOptionMixWithOthers
                                  error:&sessionError];
-    
-    printf("setCategory %d \n", result);
-    // Activate the audio session
-    result = [audioSession setActive:YES error:&sessionError];
-    printf("setActive %d \n", result);
+
+    if(![audioSession setActive:YES error:&sessionError]) {
+        NSLog(@"%ld-----%@",sessionError.code, sessionError.domain);
+    }
 }
 + (void)setPlayback {
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     
     NSError *sessionError;
-    BOOL result;
-    result = [audioSession setCategory:AVAudioSessionCategoryPlayback
-                           withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker | AVAudioSessionCategoryOptionMixWithOthers | AVAudioSessionCategoryOptionAllowBluetooth
-                                 error:&sessionError];
     
-    printf("setCategory %d \n", result);
-    // Activate the audio session
-    result = [audioSession setActive:YES error:&sessionError];
-    printf("setActive %d \n", result);
+    if (![audioSession setCategory:AVAudioSessionCategoryPlayback
+                       withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker |
+          AVAudioSessionCategoryOptionMixWithOthers |
+          AVAudioSessionCategoryOptionAllowBluetooth
+                             error:&sessionError]) {
+        NSLog(@"%ld-----%@",sessionError.code, sessionError.domain);
+    }
+    
+    if(![audioSession setActive:YES error:&sessionError]) {
+        NSLog(@"%ld-----%@",sessionError.code, sessionError.domain);
+    }
 }
 @end

@@ -46,7 +46,7 @@ static const double kSampleTime = 0.01;
 - (instancetype)initWithASBD:(AudioStreamBasicDescription)asbd {
     if (self = [super init]) {
         _asbd = asbd;
-        _queue = dispatch_queue_create("zf.audioPlayer", DISPATCH_QUEUE_SERIAL);
+        _queue = dispatch_queue_create("audioPlayer", DISPATCH_QUEUE_SERIAL);
         [self setupASBD];
         [self getAudioUnits];
         [self setupAudioUnits];
@@ -79,7 +79,6 @@ static const double kSampleTime = 0.01;
 
 - (void)setupAudioUnits {
     OSStatus status;
-    //设置io输入格式
     status = AudioUnitSetProperty(_ioUnit,
                                   kAudioUnitProperty_StreamFormat,
                                   kAudioUnitScope_Input,
@@ -92,7 +91,6 @@ static const double kSampleTime = 0.01;
     NSError *error;
     [[AVAudioSession sharedInstance] setPreferredIOBufferDuration:bufferDuration error:&error];
     
-    //设置输入回调
     AURenderCallbackStruct rcbs;
     rcbs.inputProc = &InputRenderCallback;
     rcbs.inputProcRefCon = (__bridge void *_Nullable)(self);
@@ -113,10 +111,13 @@ static const double kSampleTime = 0.01;
         CheckError(status, "AUGraphInitialize");
         status = AUGraphStart(self.graph);
         CheckError(status, "AUGraphStart");
-        __weak typeof(self) weakSelf = self;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.playing = YES;
-        });
+        if (status) {
+            __weak typeof(self) weakSelf = self;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.playing = YES;
+            });
+        }
+        
     });
 }
 - (void)stop {
@@ -126,10 +127,13 @@ static const double kSampleTime = 0.01;
         CheckError(status, "AUGraphStop");
         status = AUGraphUninitialize(self.graph);
         CheckError(status, "AUGraphUninitialize");
-        __weak typeof(self) weakSelf = self;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.playing = NO;
-        });
+        
+        if (status) {
+            __weak typeof(self) weakSelf = self;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.playing = YES;
+            });
+        }
     });
 }
 static OSStatus InputRenderCallback(void *inRefCon,

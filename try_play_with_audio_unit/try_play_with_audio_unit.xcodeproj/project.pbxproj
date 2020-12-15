@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A413B0CF25885F4E00570394 /* autestAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = A413B0CE25885F4E00570394 /* autestAudioUnit.m */; };
+		A413B0D325885F4E00570394 /* DSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A413B0D225885F4E00570394 /* DSPKernel.hpp */; };
+		A413B0D525885F4E00570394 /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = A413B0D425885F4E00570394 /* DSPKernel.mm */; };
+		A413B0D725885F4E00570394 /* BufferedAudioBus.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A413B0D625885F4E00570394 /* BufferedAudioBus.hpp */; };
+		A413B0DA25885F4E00570394 /* autestDSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A413B0D925885F4E00570394 /* autestDSPKernel.hpp */; };
+		A413B0DC25885F4E00570394 /* autestDSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = A413B0DB25885F4E00570394 /* autestDSPKernel.mm */; };
+		A413B0E025885F4E00570394 /* AudioUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A413B0DF25885F4E00570394 /* AudioUnitViewController.m */; };
+		A413B0E325885F4E00570394 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A413B0E125885F4E00570394 /* MainInterface.storyboard */; };
+		A413B0E725885F4E00570394 /* autest.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A413B0CA25885F4E00570394 /* autest.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A48573142586FC620091AC3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A48573132586FC620091AC3A /* AppDelegate.m */; };
 		A485731A2586FC620091AC3A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48573192586FC620091AC3A /* ViewController.m */; };
 		A485731D2586FC620091AC3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A485731B2586FC620091AC3A /* Main.storyboard */; };
@@ -18,7 +27,45 @@
 		A485733A258710E10091AC3A /* DrumsMonoSTP.aif in Resources */ = {isa = PBXBuildFile; fileRef = A4857339258710E10091AC3A /* DrumsMonoSTP.aif */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A413B0E525885F4E00570394 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A48573072586FC620091AC3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A413B0C925885F4E00570394;
+			remoteInfo = autest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A413B0EB25885F4E00570394 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A413B0E725885F4E00570394 /* autest.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A413B0C42588491700570394 /* AVAudioSesion.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AVAudioSesion.md; sourceTree = "<group>"; };
+		A413B0CA25885F4E00570394 /* autest.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = autest.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A413B0CD25885F4E00570394 /* autestAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = autestAudioUnit.h; sourceTree = "<group>"; };
+		A413B0CE25885F4E00570394 /* autestAudioUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = autestAudioUnit.m; sourceTree = "<group>"; };
+		A413B0D225885F4E00570394 /* DSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DSPKernel.hpp; sourceTree = "<group>"; };
+		A413B0D425885F4E00570394 /* DSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DSPKernel.mm; sourceTree = "<group>"; };
+		A413B0D625885F4E00570394 /* BufferedAudioBus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BufferedAudioBus.hpp; sourceTree = "<group>"; };
+		A413B0D825885F4E00570394 /* autestDSPKernelAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = autestDSPKernelAdapter.h; sourceTree = "<group>"; };
+		A413B0D925885F4E00570394 /* autestDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = autestDSPKernel.hpp; sourceTree = "<group>"; };
+		A413B0DB25885F4E00570394 /* autestDSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = autestDSPKernel.mm; sourceTree = "<group>"; };
+		A413B0DE25885F4E00570394 /* AudioUnitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitViewController.h; sourceTree = "<group>"; };
+		A413B0DF25885F4E00570394 /* AudioUnitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitViewController.m; sourceTree = "<group>"; };
+		A413B0E225885F4E00570394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A413B0E425885F4E00570394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A485730F2586FC620091AC3A /* try_play_with_audio_unit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = try_play_with_audio_unit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48573122586FC620091AC3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A48573132586FC620091AC3A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -37,6 +84,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A413B0C725885F4E00570394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A485730C2586FC620091AC3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,10 +101,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A413B0CB25885F4E00570394 /* autest */ = {
+			isa = PBXGroup;
+			children = (
+				A413B0E125885F4E00570394 /* MainInterface.storyboard */,
+				A413B0E425885F4E00570394 /* Info.plist */,
+				A413B0CC25885F4E00570394 /* Audio Unit */,
+				A413B0D025885F4E00570394 /* DSP */,
+				A413B0DD25885F4E00570394 /* UI */,
+			);
+			path = autest;
+			sourceTree = "<group>";
+		};
+		A413B0CC25885F4E00570394 /* Audio Unit */ = {
+			isa = PBXGroup;
+			children = (
+				A413B0CD25885F4E00570394 /* autestAudioUnit.h */,
+				A413B0CE25885F4E00570394 /* autestAudioUnit.m */,
+			);
+			path = "Audio Unit";
+			sourceTree = "<group>";
+		};
+		A413B0D025885F4E00570394 /* DSP */ = {
+			isa = PBXGroup;
+			children = (
+				A413B0D925885F4E00570394 /* autestDSPKernel.hpp */,
+				A413B0DB25885F4E00570394 /* autestDSPKernel.mm */,
+				A413B0D125885F4E00570394 /* Helpers */,
+			);
+			path = DSP;
+			sourceTree = "<group>";
+		};
+		A413B0D125885F4E00570394 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A413B0D225885F4E00570394 /* DSPKernel.hpp */,
+				A413B0D425885F4E00570394 /* DSPKernel.mm */,
+				A413B0D625885F4E00570394 /* BufferedAudioBus.hpp */,
+				A413B0D825885F4E00570394 /* autestDSPKernelAdapter.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A413B0DD25885F4E00570394 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A413B0DE25885F4E00570394 /* AudioUnitViewController.h */,
+				A413B0DF25885F4E00570394 /* AudioUnitViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		A48573062586FC620091AC3A = {
 			isa = PBXGroup;
 			children = (
 				A48573112586FC620091AC3A /* try_play_with_audio_unit */,
+				A413B0CB25885F4E00570394 /* autest */,
 				A48573102586FC620091AC3A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				A485730F2586FC620091AC3A /* try_play_with_audio_unit.app */,
+				A413B0CA25885F4E00570394 /* autest.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +185,7 @@
 				A48573202586FC640091AC3A /* LaunchScreen.storyboard */,
 				A48573232586FC640091AC3A /* Info.plist */,
 				A48573242586FC640091AC3A /* main.m */,
+				A413B0C42588491700570394 /* AVAudioSesion.md */,
 			);
 			path = try_play_with_audio_unit;
 			sourceTree = "<group>";
@@ -103,6 +211,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A413B0C925885F4E00570394 /* autest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A413B0E825885F4E00570394 /* Build configuration list for PBXNativeTarget "autest" */;
+			buildPhases = (
+				A413B0C625885F4E00570394 /* Sources */,
+				A413B0C725885F4E00570394 /* Frameworks */,
+				A413B0C825885F4E00570394 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = autest;
+			productName = autest;
+			productReference = A413B0CA25885F4E00570394 /* autest.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A485730E2586FC620091AC3A /* try_play_with_audio_unit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A48573282586FC640091AC3A /* Build configuration list for PBXNativeTarget "try_play_with_audio_unit" */;
@@ -110,10 +235,12 @@
 				A485730B2586FC620091AC3A /* Sources */,
 				A485730C2586FC620091AC3A /* Frameworks */,
 				A485730D2586FC620091AC3A /* Resources */,
+				A413B0EB25885F4E00570394 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A413B0E625885F4E00570394 /* PBXTargetDependency */,
 			);
 			name = try_play_with_audio_unit;
 			productName = try_play_with_audio_unit;
@@ -128,6 +255,9 @@
 			attributes = {
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					A413B0C925885F4E00570394 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					A485730E2586FC620091AC3A = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -147,11 +277,23 @@
 			projectRoot = "";
 			targets = (
 				A485730E2586FC620091AC3A /* try_play_with_audio_unit */,
+				A413B0C925885F4E00570394 /* autest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A413B0C825885F4E00570394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A413B0D325885F4E00570394 /* DSPKernel.hpp in Resources */,
+				A413B0E325885F4E00570394 /* MainInterface.storyboard in Resources */,
+				A413B0D725885F4E00570394 /* BufferedAudioBus.hpp in Resources */,
+				A413B0DA25885F4E00570394 /* autestDSPKernel.hpp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A485730D2586FC620091AC3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,6 +308,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A413B0C625885F4E00570394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A413B0D525885F4E00570394 /* DSPKernel.mm in Sources */,
+				A413B0E025885F4E00570394 /* AudioUnitViewController.m in Sources */,
+				A413B0DC25885F4E00570394 /* autestDSPKernel.mm in Sources */,
+				A413B0CF25885F4E00570394 /* autestAudioUnit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A485730B2586FC620091AC3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,7 +333,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A413B0E625885F4E00570394 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A413B0C925885F4E00570394 /* autest */;
+			targetProxy = A413B0E525885F4E00570394 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		A413B0E125885F4E00570394 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A413B0E225885F4E00570394 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		A485731B2586FC620091AC3A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -200,6 +369,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A413B0E925885F4E00570394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRZ5ML7SFX;
+				INFOPLIST_FILE = autest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-234.try-play-with-audio-unit.autest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A413B0EA25885F4E00570394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRZ5ML7SFX;
+				INFOPLIST_FILE = autest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-234.try-play-with-audio-unit.autest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A48573262586FC640091AC3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -351,6 +556,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A413B0E825885F4E00570394 /* Build configuration list for PBXNativeTarget "autest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A413B0E925885F4E00570394 /* Debug */,
+				A413B0EA25885F4E00570394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A485730A2586FC620091AC3A /* Build configuration list for PBXProject "try_play_with_audio_unit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -19,6 +19,8 @@
     self.window = [[UIWindow alloc] init];
     self.window.rootViewController = [[ViewController alloc] init];
     [self.window makeKeyAndVisible];
+    
+//    NSExtensionContext *myExtensionContext = UIApplication sharedApplication.extensionContext;
     return YES;
 }
 
